@@ -1,0 +1,96 @@
+.App {
+  min-height: 100vh;
+  background-color: #0A0A0B;
+}
+.header-border {
+  border-bottom: 1px solid #27272A;
+}
+.clip-card {
+  background-color: #121214;
+  border: 1px solid #27272A;
+  transition: transform 0.2s ease-out, border-color 0.2s ease-out;
+}
+.clip-card:hover {
+  transform: translateY(-4px);
+  border-color: #3F3F46;
+}
+.btn-primary {
+  background-color: #FF3B30;
+  color: white;.btn-secondary:hover {
+  background-color: #121214;
+  color: white;
+}
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-out;
+}
+.btn-primary:hover {
+  background-color: rgba(255, 59, 48, 0.9);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #27272A;
+  color: white;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+.input-field {
+  background-color: transparent;
+  border: 1px solid #27272A;
+  color: white;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.input-field:focus {
+  outline: none;
+  border-color: #FF3B30;
+  box-shadow: 0 0 0 1px #FF3B30;
+}
+.timestamp {
+  font-family: 'JetBrains Mono', monospace;
+  color: #007AFF;
+  font-size: 0.875rem;
+  letter-spacing: -0.025em;
+}
+.badge {
+  background-color: rgba(255, 204, 0, 0.1);
+  color: #FFCC00;
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.125rem 0.5rem;
+}
+.upload-area {
+  background-image: url('https://images.pexels.com/photos/9665187/pexels-photo-9665187.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.upload-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.upload-area > * {
+  position: relative;
+  z-index: 1;
+}
+.spinner {
+  border: 3px solid #27272A;
+  border-top: 3px solid #FF3B30;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
